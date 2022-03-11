@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /todo-service
+
+  tomcat:
+    accesslog:
+      enabled: true
+      log4j: true
+      pattern: combined
+    max-threads: 50
+    accept-count: 100
+    max-connections: 100
+    min-spare-threads: 10
+
+spring:
+  application:
+    name: todo-service
+
+
+management:
+  endpoint:
+    restart:
+      enabled: true
